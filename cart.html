@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>All Products </title>
+	<link rel="shortcut icon" type="x-icon" href="logo-bulat.png">
+	<link rel="stylesheet" type="text/css" href="E-Commerce.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body> 
+
+	<!-- Page 1 Header section -->
+
+	  <div class="container">
+	    <div class="navbar">
+		  <div class="logo">
+		    <a href="index.html"> <img src="logo.png" width="125px"></a>
+		</div>
+		<nav>
+			 <ul id="MenuItems">
+              	<li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul>
+		</nav>
+		<a href="cart.html"><img src="cart.png" width="30px" height="30px"></a>
+		<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+	</div>
+	</div>
+
+  <!-- ----------Cart items details---------- -->
+       <div class="small-container cart-page">
+         <table>
+           <tr>
+             <th>Product</th>
+             <th>Jumlah</th>
+             <th>Sub-total</th>
+           </tr>
+           <tr>
+             <td>
+              <div class="cart-info">
+                <img src="buy-1.jpg">
+                <div>
+                  <p>chuck 70 White</p>
+                  <small>Price: Rp1.299.000</small>
+                  <br>
+                  <a href="">Remove</a>
+                </div>
+              </div>
+             </td>
+             <td><input type="number" value="1"></td>
+             <td style="color: black;">Rp1.299.000</td>
+           </tr>
+           <tr>
+             <td>
+              <div class="cart-info">
+                <img src="buy-2.jpg">
+                <div>
+                  <p>Converse x Brain Dead Chuck 70</p>
+                  <small>Price: Rp1.799.000</small>
+                  <br>
+                  <a href="">Remove</a>
+                </div>
+              </div>
+             </td>
+             <td><input type="number" value="1"></td>
+             <td style="color:black;">Rp1.799.000</td>
+           </tr>
+           <tr>
+             <td>
+              <div class="cart-info">
+                <img src="buy-3.jpg">
+                <div>
+                  <p>Chuck Taylor All Star CX EXP2</p>
+                  <small>Price: Rp1.499.000</small>
+                  <br>
+                  <a href="">Remove</a>
+                </div>
+              </div>
+             </td>
+             <td><input type="number" value="1"></td>
+             <td style="color:black;">Rp1.499.000</td>
+           </tr>
+         </table>
+
+         <div class="total-price">
+           <table>
+             <tr>
+               <td>Sub-Total</td>
+               <td>Rp4.597.000</td>
+             </tr>
+              <tr>
+               <td>delivery</td>
+               <td>Rp73.000</td>
+             </tr>
+              <tr>
+               <td>Total</td>
+               <td>Rp4.670.000</td>
+             </tr>
+           </table>
+         </div>
+         <a href="https://chat.whatsapp.com/EL1RjSRb9ay7RbkojTxSUb" class="btn">Buy &#8594;</a>
+       </div>
+
+       <!-- ---------footer---------- -->
+
+       <div class="footer">
+       	<div class="container">
+       		<div class="row">
+       			</div>
+       			<div class="footer-col-2">
+       				<img src="logo-2.png">
+       				<p>Our Purpose Is to Sustainable Make the Pleasure and
+       				Benefits of Sport Accessible to the Many.</p>
+       			</div>
+       		</div>
+
+       		<hr>
+       	</div>
+       </div>
+
+       <!-- ------JavaScript for show menu and hide menu------- -->
+       <script>
+       	let MenuItems = document.getElementById('MenuItems');
+       	MenuItems.style.maxHeight = "0px";
+       	function menutoggle() {
+       		if(MenuItems.style.maxHeight == "0px"){
+       			MenuItems.style.maxHeight = "200px";
+       		}else{
+       			MenuItems.style.maxHeight = "0px";
+       		}
+       	}
+       </script>
+</body>
+</html>

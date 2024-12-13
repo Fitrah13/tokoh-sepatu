@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>converse store</title>
+	<link rel="shortcut icon" type="x-icon" href="logo-bulat.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+	*{
+	padding: 0;
+	margin: 0;
+/*	font-family: system-ui;*/
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	 font-family: "Poppins", sans-serif;
+}
+.header{
+	background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+	margin-top: 60px;
+}
+.container{
+	max-width: 100vw;
+	/*height: 100vh;*/
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+}
+nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+a{
+	text-decoration: none;
+	color: #555;
+}
+p{
+	color: #555;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+.col-2{
+	flex-basis: 44%;
+	min-width: 300px;
+}
+.col-2 img{
+	max-width: 100%;
+	padding: 15px 0px;
+}
+
+.col-2 h1{
+	font-size: 50px;
+	line-height: 60px;
+	margin: 20px 0;
+}
+.btn{
+	display: inline-block;
+	background: #ff523b;
+	color: #fff;
+	padding: 8px 30px;
+	margin: 30px 0;
+	border-radius: 30px;
+	border: none;
+	transition: background 0.5s;
+}
+.btn:hover{
+	background: #563434;
+}
+
+/*-----Feature Categories-----*/
+
+.categories{
+	margin: 70px 0;
+}
+.col-3{
+	flex-basis: 30%;
+	min-width: 250px;
+	margin-bottom: 30px;
+	transition: all linear 0.3s;
+}
+.col-3:hover{
+	scale: 1.1;
+}
+.col-3 img{
+	width: 100%;
+	border-radius: 10px;
+}
+.small-container{
+	max-width: 1080px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+/*-----Feature Products-----*/
+.small-container1{
+	max-width: 1080px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.title{
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	line-height: 60px;
+	color: #555;
+}
+.title::after{
+	content: '';
+	background: #ff523b;
+	width: 80px;
+	height: 5px;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.col-4{
+	flex-basis: 25%;
+	padding: 10px;
+	min-width: 200px;
+	margin-bottom: 50px;
+	transition: transform 0.5s;
+}
+.col-4 img{
+	width: 100%;
+}
+h4{
+	color: #555;
+	font-weight: normal;
+}
+.col-4{
+	font-size: 14px;
+}
+.rating .fa{
+    color: #ff523b;
+}
+.col-4:hover{
+	transform: translateY(-5px);
+}
+
+/*--------Offer------*/
+
+.small-container2{
+	max-width: 1080px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.offer{
+	background: radial-gradient(#fff,blue);
+	margin-top: 80px;
+	padding: 30px 0;
+}
+.col-2 .offer-img{
+	padding: 50px;
+}
+small{
+	color: #555;
+}
+
+/*--------Media Query for Menu---------*/
+
+@media only screen and (max-width: 800px){
+	nav ul{
+       position: absolute;
+       top: 70px;
+       left: 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      border: 1px solid rgba(255, 255, 255, 0.20);
+       width: 100%;
+       border-radius: 20px;
+       overflow: hidden;
+       transition: max-height 0.5s;
+
+	}
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: white;
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+
+/*--------Media Query for less than 600 screen size------*/
+
+@media only screen and (max-width: 600px){
+.row{
+	text-align: center;
+   }
+   .col-2, .col-3, .col-4{
+   	flex-basis: 100%;
+   }
+}
+</style>
+</head>
+<body> 
+
+	<!-- Page 1 Header section -->
+
+     <div class="header">
+	  <div class="container">
+	    <div class="navbar">
+		  <div class="logo">
+		     <img src="logo.png" width="125px">
+		</div>
+		<nav>
+			 <ul id="MenuItems">
+              	<li><a href="">Home</a></li>
+              	<li><a href="">Products</a></li>
+              	<li><a href="">About</a></li>
+              	<li><a href=""></a></li>
+              	<li><a href=""></a></li>
+              </ul>
+		</nav>
+		<img src="cart.png" width="30px" height="30px">
+		<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+	</div>
+	<div class="row">
+		<div class="col-2">
+			<h1>Create Your Style With a Variety Of Converse Shoes!</h1>
+			<p>Enjoy every trip you take with the Converse shoes ’ variant that you like.</p>
+			<button class="btn">Explore Now &#8594;</button>
+		</div>
+		<div class="col-2">
+			<img src="image1.png">
+		</div>
+	</div>
+	</div>
+</div>
+	
+	<!-- ------Feature Categories----- -->
+
+		<div class="categories">
+		<div class="small-container">
+			<h2 class="title">Feature Categories</h2>
+		<div class="row">
+			<div class="col-3">
+				<img src="awal-2.jpg">
+			</div>
+			<div class="col-3">
+				<img src="awal-3.jpg">
+			</div>
+			<div class="col-3">
+				<img src="awal.jpg">
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- -----Feature Products----- -->
+      
+       <div class="small-container1">
+      	<h2 class="title">Feature Products</h2>
+      	<div class="row">
+      		<div class="col-4">
+      			<img src="product-1.jpg">
+      			<h4>chuck 70 white</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>Rp1.299.000</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="product-2.jpg">
+      			<h4>chuck 70 blacl</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$3999.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylish Paints</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1306248/pexels-photo-1306248.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Blue T-Shirt</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$5099.00</p>
+      		</div>
+      	</div>
+
+      	<h2 class="title">Latest Products</h2>
+      	<div class="row">
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Gray Stylo Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$50.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Black Printed T-Shirt</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$3999.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylish Shocks</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Rolex Black Watch</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$5099.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Dream 11 Watch</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$50.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Black Printed Nike Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$3999.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Brand Trousers</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-o"></i>
+      			</div>
+      			<p>$5099.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/3029796/pexels-photo-3029796.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/3029796/pexels-photo-3029796.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      		<div class="col-4">
+      			<img src="https://images.pexels.com/photos/3029796/pexels-photo-3029796.jpeg?auto=compress&cs=tinysrgb&w=400">
+      			<h4>Stylo Latest Shoes</h4>
+      			<div class="rating">
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star"></i>
+      				<i class="fa fa-star-half-o"></i>
+      				<i class="fa fa-star-half-o"></i>
+      			</div>
+      			<p>$1500.00</p>
+      		</div>
+      	</div>
+      </div>
+
+       <!-- ---------footer---------- -->
+
+       			<div class="footer-col-2">
+       				<img src="logo-white.png">
+       				<p>Our Purpose Is to Sustainable Make the Pleasure and
+       				Benefits of Sport Accessible to the Many.</p>
+       			</div>
+       </div>
+
+       <!-- ------JavaScript for show menu and hide menu------- -->
+       <script>
+       	let MenuItems = document.getElementById('MenuItems');
+       	MenuItems.style.maxHeight = "0px";
+       	function menutoggle() {
+       		if(MenuItems.style.maxHeight == "0px"){
+       			MenuItems.style.maxHeight = "200px";
+       		}else{
+       			MenuItems.style.maxHeight = "0px";
+       		}
+       	}
+       </script>
+
+</body>
+</html>
